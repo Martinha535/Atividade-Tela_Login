@@ -39,8 +39,10 @@
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
                         <!-- FORMULARIO -->
-                        <form id="login-form" class="form">
+                        <form id="login-form" class="form" class="form" action="validar.php" method="post>
                             <h3 class="text-center">Login</h3>
+
+                            
                             <?php if(isset($_POST["erro"])):?>
                                 <!-- MENSAGEM DE ERRO [INICIO] * Só exibir se tiver falhado no login -->
                                 <p class="alert alert-danger">Login ou senha inválidos</p>
@@ -50,13 +52,16 @@
                             <!-- EMAIL -->
                             <div class="form-group">
                                 <label>Email:</label><br>
-                                <input type="text" class="form-control">
+
+                                <!-- tem que colocar o "name" no input para poder chamar no outro aqui -->
+
+                                <input type="text" class="form-control" name="email">
                             </div>
 
                             <!-- SENHA -->
                             <div class="form-group">
                                 <label>Senha:</label><br>
-                                <input type="password" class="form-control">
+                                <input type="password" class="form-control" name="matricula">
                             </div>
 
                             <!-- SUBMIT -->
