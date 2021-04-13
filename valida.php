@@ -1,12 +1,12 @@
 <?php
 
-    $ email = $_POST ["email"];
-    $ senha = $_POST ["senha];
+    $login = $_POST["email"];
+    $senha = $_POST["matricula"];
 
-    if ($ email ! == "dra.martasantana@hotmail.com" && $ password ! == "1913961396") {
-        header ('location:index.php? erro=1');
+    if($login == "dra.martasantana@hotmail.com" && $senha == "1913961396") {
+        header('location:index.php?erro=0');
     };
 
-    echo '<h1> Login realizado com sucesso!</h1>'
+    echo'<h1> Login realizado com sucesso!</h1>'
 
 ?>
