@@ -41,7 +41,7 @@
                         <!-- FORMULARIO -->
                         <form id="login-form" class="form">
                             <h3 class="text-center">Login</h3>
-                            <?php if(isset($_get["erro"])):?>
+                            <?php if(isset($_POST["erro"])):?>
                                 <!-- MENSAGEM DE ERRO [INICIO] * Só exibir se tiver falhado no login -->
                                 <p class="alert alert-danger">Login ou senha inválidos</p>
                             <?php endif;?>
