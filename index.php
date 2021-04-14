@@ -1,6 +1,10 @@
+<?php
+    
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,20 +21,17 @@
             background-color: #2E2532;
             height: 100vh;
         }
-
         #login .container #login-row #login-column #login-box {
             margin-top: 50px;
             max-width: 600px;
             border: 1px solid #9C9C9C;
             background-color: #EAEAEA;
         }
-
         #login .container #login-row #login-column #login-box #login-form {
             padding: 20px;
         }
     </style>
 </head>
-
 <body>
     <div id="login">
         <h3 class="text-center text-white pt-5">Atividade PHP</h3>
@@ -39,22 +40,21 @@
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
                         <!-- FORMULARIO -->
-                        <form id="login-form" class="form" class="form" action="validar.php" method="post>
+                        <form id="login-form" class="form" action="validar.php" method="post">
                             <h3 class="text-center">Login</h3>
 
-                            
-                            <?php if(isset($_POST["erro"])):?>
-                                <!-- MENSAGEM DE ERRO [INICIO] * Só exibir se tiver falhado no login -->
-                                <p class="alert alert-danger">Login ou senha inválidos</p>
-                            <?php endif;?>
+                            <!-- MENSAGEM DE ERRO [INICIO] * Só exibir se tiver falhado no login -->
+                            <?php
+                                if (isset($_GET['erro'])){ ?>
+                                    <p class="alert alert-danger">Login ou senha inválidos</p>
+                                
                             <!-- MENSAGEM DE ERRO [FIM] -->
+
+                            <?php } ?>
 
                             <!-- EMAIL -->
                             <div class="form-group">
                                 <label>Email:</label><br>
-
-                                <!-- tem que colocar o "name" no input para poder chamar no outro aqui -->
-
                                 <input type="text" class="form-control" name="email">
                             </div>
 
@@ -76,5 +76,4 @@
         </div>
     </div>
 </body>
-
 </html>
