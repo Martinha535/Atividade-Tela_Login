@@ -16,5 +16,4 @@ $mensagem = "<span class = Login realizado com sucesso!><b>Login realizado com s
         header('location:index.php?erro=1');
             
     }
-
 ?>
